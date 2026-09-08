@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Maharshi Soni - AI & QA Engineer</title>
+<meta name="description" content="AI-Powered QA Automation Engineer - 20 projects">
+<meta property="og:title" content="Maharshi Soni - Portfolio">
+<meta property="og:image" content="assets/photo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Anton&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F1EC;--nav:#14141B;--red:#B3121F;--red2:#C62333;--ink:#141414;--txt2:#5A5A5A;--txt3:#9A9A9A;--card:#FFF;--cardb:#E5E2DA;--web:#D8D5CC}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--red);color:#fff}
+
+/* COMIC SHADOW HEADINGS */
+.comic-h{font-family:'Anton',sans-serif;text-transform:uppercase;text-shadow:4px 5px 0 var(--red2);letter-spacing:1px}
+.sec-label{font-size:12px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);margin-bottom:16px;display:flex;align-items:center;gap:8px;justify-content:center}
+.sec-label::before{content:'';width:10px;height:10px;background:var(--red);display:inline-block}
+.sec-h2{font-family:'Anton',sans-serif;font-size:clamp(32px,6vw,48px);text-shadow:4px 5px 0 var(--red2);text-transform:uppercase;margin-bottom:8px;text-align:center}
+.sec-h2::after{content:'';display:block;width:40px;height:3px;background:var(--red);margin:12px auto 0}
+
+/* WEB DECORATION */
+.web-deco{position:absolute;width:300px;height:300px;opacity:0.06;pointer-events:none;background:radial-gradient(circle,transparent 30%,var(--web) 30%,var(--web) 31%,transparent 31%),linear-gradient(0deg,var(--web) 1px,transparent 1px),linear-gradient(60deg,var(--web) 1px,transparent 1px),linear-gradient(120deg,var(--web) 1px,transparent 1px);background-size:100% 100%,50px 50px,50px 50px,50px 50px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:var(--nav)}
+.nav-in{max-width:1280px;margin:0 auto;padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{color:var(--red);font-family:'Anton',sans-serif;font-size:24px;letter-spacing:2px}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:12px;font-weight:600;text-transform:uppercase;color:#fff;letter-spacing:0.08em;transition:color 0.3s}
+.nav-links a:hover{color:var(--red)}
+
+/* HERO */
+.hero{max-width:1280px;margin:0 auto;padding:80px 48px 60px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;min-height:80vh}
+.hero-txt{position:relative;z-index:1}
+.hero-eye{font-size:12px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);margin-bottom:20px}
+.hero-name{font-family:'Anton',sans-serif;font-size:clamp(48px,8vw,80px);line-height:0.95;text-shadow:5px 6px 0 var(--red2);text-transform:uppercase;margin-bottom:32px}
+.hero-btns{display:flex;gap:14px}
+.btn-red{padding:14px 28px;background:var(--red);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;cursor:pointer;transition:all 0.3s}
+.btn-red:hover{box-shadow:0 4px 20px rgba(179,18,31,0.4);transform:translateY(-2px)}
+.btn-dark{padding:14px 28px;background:var(--ink);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;text-transform:uppercase;cursor:pointer;transition:all 0.3s}
+.btn-dark:hover{transform:translateY(-2px)}
+
+/* HERO MASK REVEAL */
+.hero-img{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4;cursor:crosshair}
+.hero-img>img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.hero-img .real-layer{z-index:1}
+.spidey-overlay{position:absolute;inset:0;z-index:2;-webkit-mask-image:radial-gradient(circle 0px at 50% 50%,transparent 0%,transparent 60%,black 100%);mask-image:radial-gradient(circle 0px at 50% 50%,transparent 0%,transparent 60%,black 100%);display:flex;align-items:flex-start;justify-content:center;background:rgba(200,200,200,0.15)}
+.spidey-overlay img{width:313px;height:417px;object-fit:cover}
+
+/* TICKER */
+.ticker{padding:20px 0;overflow:hidden;position:relative}
+.ticker-row{display:flex;width:max-content;animation:ticker 25s linear infinite}
+.ticker-row.rev{animation-direction:reverse;animation-duration:30s}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-strip{padding:14px 0;font-family:'Anton',sans-serif;font-size:16px;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap}
+.ticker-red{background:var(--red);color:#fff;transform:skewY(-1.5deg);margin-bottom:4px}
+.ticker-dark{background:var(--ink);color:var(--red);transform:skewY(1.5deg)}
+
+/* ABOUT */
+.about{max-width:1280px;margin:0 auto;padding:100px 48px;display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:center;position:relative}
+.about-photo{width:250px;height:250px;border-radius:50%;border:3px solid var(--red);overflow:hidden;justify-self:center}
+.about-photo img{width:100%;height:100%;object-fit:cover}
+.about h2{font-family:'Anton',sans-serif;font-size:clamp(28px,4vw,40px);text-shadow:3px 4px 0 var(--red2);text-transform:uppercase;margin-bottom:16px}
+.about p{font-size:15px;color:var(--txt2);line-height:1.7;margin-bottom:16px}
+.about-label{font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--txt3);margin-bottom:12px}
+.atag{display:inline-block;padding:4px 12px;border:1px solid var(--red);border-radius:6px;font-size:12px;color:var(--red);margin:3px;font-weight:600}
+
+/* SKILLS */
+.skills-sec{max-width:1000px;margin:0 auto;padding:100px 48px;position:relative}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 48px;margin-top:48px}
+.skill-row{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:10px;transition:all 0.3s;cursor:default}
+.skill-row:hover{background:var(--red);box-shadow:0 4px 16px rgba(179,18,31,0.2)}
+.skill-row:hover .skill-name,.skill-row:hover .skill-cat,.skill-row:hover .skill-level{color:#fff}
+.skill-row:hover .skill-dot{background:#fff}
+.skill-dot{width:8px;height:8px;border-radius:50%;background:var(--red);flex-shrink:0;transition:background 0.3s}
+.skill-info{flex:1}
+.skill-name{display:block;font-size:14px;font-weight:700;text-transform:uppercase;transition:color 0.3s}
+.skill-cat{display:block;font-size:11px;color:var(--txt3);transition:color 0.3s}
+.skill-level{font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px;background:var(--bg);transition:all 0.3s}
+.skill-row:hover .skill-level{background:rgba(255,255,255,0.2)}
+
+/* EXPERIENCE */
+.exp-sec{max-width:900px;margin:0 auto;padding:100px 48px}
+.tgrid{margin-top:48px;display:flex;flex-direction:column;gap:16px}
+.timeline-card{background:var(--card);border:1px solid var(--cardb);border-left:3px solid var(--red);border-radius:0 12px 12px 0;padding:24px 28px;transition:all 0.3s}
+.timeline-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.06)}
+.tc-period{font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px}
+.timeline-card h3{font-size:16px;font-weight:700;margin-bottom:4px}
+.tc-company{font-size:13px;color:var(--txt3);margin-bottom:10px}
+.timeline-card ul{font-size:13px;color:var(--txt2);line-height:1.6;padding-left:18px}
+.timeline-card li{margin-bottom:3px}
+
+/* CERTIFICATIONS */
+.certs-sec{max-width:1100px;margin:0 auto;padding:80px 48px;text-align:center}
+.cert-grid{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:32px}
+.cert-chip{padding:6px 14px;border:1px solid var(--cardb);border-radius:6px;font-size:11px;color:var(--txt2);background:var(--card);transition:all 0.3s}
+.cert-chip:hover{border-color:var(--red);color:var(--red)}
+
+/* PROJECTS */
+.projects-sec{max-width:1100px;margin:0 auto;padding:100px 48px;position:relative}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px}
+.pcard{background:var(--card);border:1px solid var(--cardb);border-radius:12px;padding:24px;transition:all 0.3s;position:relative}
+.pcard:hover{box-shadow:0 8px 30px rgba(0,0,0,0.08);transform:translateY(-4px)}
+.pcard-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.pcard h3{font-size:16px;font-weight:700;text-transform:uppercase}
+.pcard-link{font-size:18px;color:var(--red);transition:transform 0.2s}
+.pcard-link:hover{transform:scale(1.2)}
+.pcard p{font-size:14px;color:var(--txt2);line-height:1.6;margin-bottom:14px}
+.ptags{display:flex;flex-wrap:wrap;gap:6px}
+.ptag{font-size:11px;padding:3px 10px;border:1px solid var(--cardb);border-radius:6px;color:var(--red);font-weight:600}
+
+/* CONTACT */
+.contact-sec{max-width:700px;margin:0 auto;padding:100px 48px;text-align:center;position:relative}
+.contact-card{background:var(--card);border:1px solid var(--cardb);border-radius:12px;padding:32px;margin-top:32px;text-align:left}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+.form-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--txt3)}
+.form-input{padding:12px 16px;border:1px solid var(--cardb);border-radius:8px;font-size:14px;background:var(--bg);font-family:inherit;transition:border-color 0.3s}
+.form-input:focus{outline:none;border-color:var(--red)}
+textarea.form-input{min-height:120px;resize:vertical}
+.btn-submit{width:100%;padding:16px;background:var(--red);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;cursor:pointer;margin-top:16px;transition:all 0.3s}
+.btn-submit:hover{box-shadow:0 4px 20px rgba(179,18,31,0.3)}
+
+/* FOOTER */
+footer{padding:80px 48px 40px;text-align:center;position:relative;overflow:hidden}
+.foot-ghost{font-family:'Anton',sans-serif;font-size:clamp(48px,14vw,160px);text-transform:uppercase;text-shadow:4px 5px 0 var(--red2);opacity:0.08;pointer-events:none}
+.foot-links{margin-top:24px;display:flex;justify-content:center;gap:24px}
+.foot-links a{font-size:13px;font-weight:600;color:var(--txt2);transition:color 0.3s}
+.foot-links a:hover{color:var(--red)}
+.foot-copy{margin-top:24px;font-size:12px;color:var(--txt3)}
+
+/* SPIDEY DECORATIONS */
+.spidey-deco{position:absolute;pointer-events:none;z-index:0;opacity:0.07}
+.spidey-hang{animation:swing 4s ease-in-out infinite;transform-origin:top center}
+@keyframes swing{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+.spidey-float{animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+
+/* ANIMATIONS */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease-out,transform 0.6s ease-out}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.hero{grid-template-columns:1fr;text-align:center}.hero-img{max-width:400px;margin:0 auto}.hero-btns{justify-content:center}.about{grid-template-columns:1fr}.about-photo{margin:0 auto}.pgrid{grid-template-columns:1fr}}
+@media(max-width:640px){.nav-links{display:none}.hero,.about,.skills-sec,.exp-sec,.certs-sec,.projects-sec,.contact-sec,footer{padding-left:24px;padding-right:24px}.nav-in{padding:0 24px}.skills-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.hero-stats{flex-wrap:wrap;gap:16px}}
+</style>
+</head>
+<body>
+
+<nav><div class="nav-in">
+  <div class="nav-logo">MS.</div>
+  <div class="nav-links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="engineering.html">Dark Theme</a></div>
+</div></nav>
+
+<section class="hero" id="home">
+  <div class="web-deco" style="top:-50px;left:-50px"></div>
+  <div class="hero-txt">
+    <div class="hero-eye">Your Friendly Neighborhood Engineer</div>
+    <div class="hero-name">MAHARSHI<br>SONI.</div>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-red">Explore Projects</a>
+      <a href="resume.html" class="btn-dark">Resume</a>
+    </div>
+  </div>
+  <div class="hero-img" id="heroImg">
+    <img src="assets/photo.png" alt="Maharshi Soni" class="real-layer">
+    <div class="spidey-overlay">
+      <img src="assets/spider_mask.svg" alt="" style="width:100%;height:100%;object-fit:cover">
+    </div>
+    <div style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:3;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);background:rgba(243,241,236,0.9);padding:6px 16px;border-radius:6px;pointer-events:none">Hover to Reveal</div>
+  </div>
+</section>
+
+<div class="ticker">
+  <div class="ticker-strip ticker-red"><div class="ticker-row">QA AUTOMATION ENGINEER &nbsp;&bull;&nbsp; AI/ML DEVELOPER &nbsp;&bull;&nbsp; PLAYWRIGHT EXPERT &nbsp;&bull;&nbsp; RAG SYSTEMS &nbsp;&bull;&nbsp; FULL STACK BUILDER &nbsp;&bull;&nbsp; AGENTIC AI &nbsp;&bull;&nbsp; SELF-HEALING TESTS &nbsp;&bull;&nbsp; QA AUTOMATION ENGINEER &nbsp;&bull;&nbsp; AI/ML DEVELOPER &nbsp;&bull;&nbsp; PLAYWRIGHT EXPERT &nbsp;&bull;&nbsp; RAG SYSTEMS &nbsp;&bull;&nbsp; FULL STACK BUILDER &nbsp;&bull;&nbsp; AGENTIC AI &nbsp;&bull;&nbsp; SELF-HEALING TESTS &nbsp;&bull;&nbsp; QA AUTOMATION ENGINEER &nbsp;&bull;&nbsp; AI/ML DEVELOPER &nbsp;&bull;&nbsp; PLAYWRIGHT EXPERT &nbsp;&bull;&nbsp; RAG SYSTEMS &nbsp;&bull;&nbsp; FULL STACK BUILDER &nbsp;&bull;&nbsp; AGENTIC AI &nbsp;&bull;&nbsp; SELF-HEALING TESTS &nbsp;&bull;&nbsp; </div></div>
+  <div class="ticker-strip ticker-dark"><div class="ticker-row rev">INSURANCE DOMAIN &nbsp;&bull;&nbsp; LANGGRAPH &nbsp;&bull;&nbsp; BDD/GHERKIN &nbsp;&bull;&nbsp; VECTOR SEARCH &nbsp;&bull;&nbsp; PYTHON &nbsp;&bull;&nbsp; FASTAPI &nbsp;&bull;&nbsp; CI/CD PIPELINES &nbsp;&bull;&nbsp; INSURANCE DOMAIN &nbsp;&bull;&nbsp; LANGGRAPH &nbsp;&bull;&nbsp; BDD/GHERKIN &nbsp;&bull;&nbsp; VECTOR SEARCH &nbsp;&bull;&nbsp; PYTHON &nbsp;&bull;&nbsp; FASTAPI &nbsp;&bull;&nbsp; CI/CD PIPELINES &nbsp;&bull;&nbsp; INSURANCE DOMAIN &nbsp;&bull;&nbsp; LANGGRAPH &nbsp;&bull;&nbsp; BDD/GHERKIN &nbsp;&bull;&nbsp; VECTOR SEARCH &nbsp;&bull;&nbsp; PYTHON &nbsp;&bull;&nbsp; FASTAPI &nbsp;&bull;&nbsp; CI/CD PIPELINES &nbsp;&bull;&nbsp; </div></div>
+</div>
+
+<section class="about" id="about">
+  <div class="web-deco" style="bottom:-80px;left:-80px"></div>
+  <div class="fade-in">
+    <div class="sec-label">Behind The Mask</div>
+    <h2>MAHARSHI SONI.</h2>
+    <p>I'm a Senior QA Automation Engineer and AI developer at PwC with 5+ years building JavaScript-based UI/API automation frameworks for PolicyCenter, BillingCenter, and ClaimCenter across 15+ insurance lines.</p>
+    <p>From building $3M SaaS automation products to crafting AI-powered testing agents with LangGraph, I bridge the gap between traditional QA and cutting-edge AI engineering.</p>
+    <div class="about-label">Primary Tech Stack</div>
+    <div><span class="atag">Python</span><span class="atag">Playwright</span><span class="atag">FastAPI</span><span class="atag">scikit-learn</span><span class="atag">FAISS</span><span class="atag">Docker</span><span class="atag">JavaScript</span><span class="atag">Guidewire</span></div>
+  </div>
+  <div class="about-photo fade-in"><img src="assets/photo.png" alt="Maharshi Soni"></div>
+</section>
+
+<section class="skills-sec" id="skills" style="position:relative">
+  <div class="spidey-deco spidey-hang" style="top:20px;right:40px"><img src="assets/spider_hero_hanging.svg" width="120" alt=""></div>
+  <div class="fade-in" style="text-align:center">
+    <div class="sec-label">Arsenal & Expertise</div>
+    <div class="sec-h2">Technical Skills.</div>
+  </div>
+  <div class="skills-grid"><div class="skill-row" data-i="0"><span class="skill-dot"></span><div class="skill-info"><span class="skill-name">PYTHON & AI/ML</span><span class="skill-cat">Languages & AI</span></div><span class="skill-level">ADVANCED</span></div><div class="skill-row" data-i="1"><span class="skill-dot"></span><div class="skill-info"><span class="skill-name">PLAYWRIGHT & TESTCAFE</span><span class="skill-cat">Test Automation</span></div><span class="skill-level">ADVANCED</span></div><div class="skill-row" data-i="2"><span class="skill-dot"></span><div class="skill-info"><span class="skill-name">FAISS & CHROMADB</span><span class="skill-cat">Vector Search & RAG</span></div><span class="skill-level">ADVANCED</span></div><div class="skill-row" data-i="3"><span class="skill-dot"></span><div class="skill-info"><span class="skill-name">FASTAPI & FLASK</span><span class="skill-cat">Web Frameworks</span></div><span class="skill-level">ADVANCED</span></div><div class="skill-row" data-i="4"><span class="skill-dot"></span><div class="skill-info"><span class="skill-name">SCIKIT-LEARN & NLTK</span><span class="skill-cat">Machine Learning & NLP</span></div><span class="skill-level">ADVANCED</span></div><div class="skill-row" data-i="5"><span class="skill-dot"></span><div class="skill-info"><span class="skill-name">DOCKER & CI/CD</span><span class="skill-cat">DevOps & Infrastructure</span></div><span class="skill-level">PROFICIENT</span></div><div class="skill-row" data-i="6"><span class="skill-dot"></span><div class="skill-info"><span class="skill-name">JAVASCRIPT & NODE.JS</span><span class="skill-cat">Full-Stack Development</span></div><span class="skill-level">ADVANCED</span></div><div class="skill-row" data-i="7"><span class="skill-dot"></span><div class="skill-info"><span class="skill-name">GUIDEWIRE & INSURANCE</span><span class="skill-cat">Domain Expertise</span></div><span class="skill-level">EXPERT</span></div></div>
+</section>
+
+<section class='exp-sec'><div style='text-align:center' class='fade-in'><div class='sec-label'>Career Timeline</div><div class='sec-h2'>Experience.</div></div><div class='tgrid'><div class="timeline-card fade-in"><div class="tc-period">08/2021 - Present</div><h3>Senior Guidewire Consultant - Automation QA</h3><div class="tc-company">PwC Acceleration Centers - Bangalore</div><ul><li>Automation framework & product development: Designed and built two JavaScript, data-driven automation SaaS testing products using TestCafe and JSON-based test data, generating over $3M in revenue and sold to 15 clients; led a 20-person team through the full product roadmap</li><li>GTUI customization: Customized the GTUI automation testing product for a major US-based Guidewire client on PolicyCenter, earning commendation from partners, managing directors, and client stakeholders and contributing to 3 subsequent business wins</li><li>Framework engineering: Identified and closed 10+ critical framework gaps spanning reporting, data-driven capability, logger functionality, and synchronization, improving overall automation system performance by 40%</li><li>Test coverage & delivery: Authored and maintained 1,000+ test cases and 30,000+ lines of JavaScript automation code across 100+ PolicyCenter user stories, reducing production bugs by 30% while participating in all Scrum ceremonies</li></ul></div><div class="timeline-card fade-in"><div class="tc-period">04/2022 - 10/2024</div><h3>Subject Matter Expert - Automation Center of Excellence (Additional Responsibility)</h3><div class="tc-company">PwC Acceleration Centers - Bangalore</div><ul><li>Automation strategy leadership: Appointed Subject Matter Expert in PwC's Center of Excellence for Automation and Innovation on the strength of niche automation skills and an innovative mindset, driving firm-wide automation strategy and knowledge sharing</li><li>Product delivery: Used SWOT analysis, market research, and disruptive innovation to build multiple SaaS, data-driven MVPs; led a 20-person team from roadmap to sale across multiple clients using Lean and Design Thinking</li><li>Enablement: Trained 150+ associates through senior managers globally and delivered 15+ sales demos; Gen AI innovation challenge finalist for automation test-data generation</li></ul></div><div class="timeline-card fade-in"><div class="tc-period">03/2021 - 06/2021</div><h3>Business Development Executive Trainee</h3><div class="tc-company">K12 Techno Services - Bangalore</div><ul><li>Brought $1,000 worth of new digital business and set a record for employer's new education-based digital business unit (AOL)</li><li>Managed up to 100 calls daily, with duties including helping customers sign up, customer retention rates as academic consultant</li><li>Worked to ensure a positive, hassle-free customer experience as a result shown 83% customer retention rate and got recognition from sales head for quality customer service</li></ul></div></div></section>
+
+<section class='exp-sec' style='background:var(--card)'><div style='text-align:center' class='fade-in'><div class='sec-label'>Academic Background</div><div class='sec-h2'>Education.</div></div><div class='tgrid'><div class="timeline-card fade-in"><div class="tc-period">09/2023 - 06/2024</div><h3>Executive Product Management (eMDP)</h3><div class="tc-company">IIM Kozhikode - Remote</div><ul><li>Overall scored 92% in this program, where I worked on 30+ real world product management applications</li><li>Capstone project: Enhancing ACKO's Car Insurance Market Penetration in Rural India (see Projects section)</li></ul></div><div class="timeline-card fade-in"><div class="tc-period">07/2017 - 05/2021</div><h3>B.Tech in Information Technology</h3><div class="tc-company">SRM Institute of Science & Technology - Chennai</div><ul><li>GPA 8/10, First Class with Distinction, in top 10% of IT batch with 33.34% Scholarship (due to top 4% in SRMJEE) for B.Tech</li><li>Major project to recognize genres from tv posters with Deep learning (CNN, VCG) and got O+ with acknowledgement from HOD</li></ul></div></div></section>
+
+<section class='certs-sec'><div class='fade-in'><div class='sec-label'>Verified Credentials</div><div class='sec-h2'>Certifications.</div></div><div class='cert-grid'><span class="cert-chip">Certified Partner Specialist - Gemini Enterprise Agent Development (Google, 2026)</span><span class="cert-chip">Evaluate and Improve Agent Development Kit Agents (Google, 2026)</span><span class="cert-chip">Digital Product Management - University of Virginia, Darden School of Business (2021)</span><span class="cert-chip">Foundations of Project Management - Google (2021)</span><span class="cert-chip">Guidewire Certified Associate - InsuranceSuite Analyst (2021)</span><span class="cert-chip">Introduction to Public Speaking - University of Washington (2021)</span><span class="cert-chip">Effective Business Presentations with PowerPoint - Coursera (2021)</span><span class="cert-chip">Human Centered Design - PwC (2022)</span><span class="cert-chip">Digital Acumen - PwC (2022)</span><span class="cert-chip">Guidewire InsuranceSuite Analyst - Aspen New Features</span><span class="cert-chip">Guidewire InsuranceSuite Analyst - Banff New Features</span><span class="cert-chip">Guidewire InsuranceSuite Analyst - Cortina New Features</span><span class="cert-chip">Guidewire InsuranceSuite Analyst - Dobson New Features</span><span class="cert-chip">Guidewire InsuranceSuite Analyst - Elysian New Features</span><span class="cert-chip">Guidewire InsuranceSuite Analyst - Flaine New Features</span><span class="cert-chip">Guidewire InsuranceSuite Analyst - Garmisch New Features</span><span class="cert-chip">Guidewire InsuranceSuite Analyst - Hakuba New Features</span><span class="cert-chip">Guidewire InsuranceSuite Analyst - Innsbruck New Features</span><span class="cert-chip">Guidewire InsuranceSuite Analyst - Jasper New Features</span><span class="cert-chip">Guidewire InsuranceSuite Analyst - Kufri New Features</span><span class="cert-chip">Guidewire InsuranceSuite Analyst - Las Lenas New Features</span><span class="cert-chip">Guidewire InsuranceSuite Analyst - Niesco New Features</span><span class="cert-chip">Policy Center Business Analyst - Aspen New Features</span><span class="cert-chip">Billing Center Business Analyst - Aspen New Features</span><span class="cert-chip">Guidewire Quality Analyst Basics</span><span class="cert-chip">Guidewire Surepath Overview</span><span class="cert-chip">InsuranceSuite Implementation Tools</span><span class="cert-chip">Business Etiquette: Phone, Email, and Text - LinkedIn (2022)</span><span class="cert-chip">Getting Things Done - LinkedIn (2022)</span><span class="cert-chip">Branding Your Authentic Self - LinkedIn (2022)</span><span class="cert-chip">Taking Charge of Your Career - LinkedIn (2022)</span><span class="cert-chip">How to Create a Career You Love - LinkedIn (2022)</span><span class="cert-chip">Mastering Self-Motivation - LinkedIn (2022)</span><span class="cert-chip">Developing a Learning Mindset - LinkedIn (2022)</span><span class="cert-chip">Communicating with Confidence - LinkedIn (2022)</span><span class="cert-chip">Asking for Feedback as an Employee - LinkedIn (2022)</span><span class="cert-chip">Remote Work Foundations - LinkedIn (2022)</span><span class="cert-chip">Tips for Working Remotely - LinkedIn (2022)</span><span class="cert-chip">Effective Listening - LinkedIn (2021)</span><span class="cert-chip">How to Ask Productive Questions - LinkedIn (2021)</span><span class="cert-chip">Interpersonal Communication - LinkedIn (2021)</span><span class="cert-chip">Communication Foundations - LinkedIn (2021)</span></div></section>
+
+<section class="projects-sec" id="projects" style="position:relative">
+  <div class="spidey-deco spidey-float" style="bottom:20px;left:20px"><img src="assets/spider_hero_character.svg" width="150" alt=""></div>
+  <div style="text-align:center" class="fade-in">
+    <div class="sec-label">Featured Works</div>
+    <div class="sec-h2">Projects.</div>
+  </div>
+  <div class="pgrid"><div class="pcard fade-in"><div class="pcard-head"><h3>Smart Text Similarity Engine</h3><a href="https://github.com/sonimaharshi1999/smart-text-similarity" target="_blank" class="pcard-link">&#8599;</a></div><p>A text similarity engine that combines TF-IDF, cosine similarity, and Jaccard distance to find semantically similar documents. Useful for plagiarism d...</p><div class="ptags"><span class="ptag">scikit-learn</span><span class="ptag">pandas</span><span class="ptag">nltk</span><span class="ptag">numpy</span></div></div><div class="pcard fade-in"><div class="pcard-head"><h3>Self-Healing Locator Engine</h3><a href="https://github.com/sonimaharshi1999/self-healing-locator-engine" target="_blank" class="pcard-link">&#8599;</a></div><p>When UI automation tests break due to changed selectors, this tool automatically finds the best alternative locator using DOM similarity scoring, attr...</p><div class="ptags"><span class="ptag">beautifulsoup4</span><span class="ptag">scikit-learn</span><span class="ptag">numpy</span><span class="ptag">pytest</span></div></div><div class="pcard fade-in"><div class="pcard-head"><h3>RAG QA Knowledge Base</h3><a href="https://github.com/sonimaharshi1999/rag-qa-knowledge-base" target="_blank" class="pcard-link">&#8599;</a></div><p>A retrieval-augmented generation system for QA teams. Upload test documentation and runbooks, ask natural language questions, get grounded answers wit...</p><div class="ptags"><span class="ptag">fastapi</span><span class="ptag">uvicorn</span><span class="ptag">python-multipart</span><span class="ptag">jinja2</span></div></div><div class="pcard fade-in"><div class="pcard-head"><h3>Playwright AI Test Generator</h3><a href="https://github.com/sonimaharshi1999/playwright-ai-test-generator" target="_blank" class="pcard-link">&#8599;</a></div><p>Takes natural language descriptions of user workflows and generates complete, runnable Playwright test scripts in Python. Uses NLP to parse user inten...</p><div class="ptags"><span class="ptag">flask</span><span class="ptag">pytest</span><span class="ptag">playwright</span><span class="ptag">pytest-playwright</span></div></div><div class="pcard fade-in"><div class="pcard-head"><h3>Mood-Based Music Recommender</h3><a href="https://github.com/sonimaharshi1999/mood-music-recommender" target="_blank" class="pcard-link">&#8599;</a></div><p>An ML-powered recommendation engine that analyzes text input describing your current mood and recommends music genres, tempo ranges, and synthetic pla...</p><div class="ptags"><span class="ptag">scikit-learn</span><span class="ptag">pandas</span><span class="ptag">numpy</span><span class="ptag">nltk</span></div></div><div class="pcard fade-in"><div class="pcard-head"><h3>LangGraph QA Agent</h3><a href="https://github.com/sonimaharshi1999/langgraph-qa-agent" target="_blank" class="pcard-link">&#8599;</a></div><p>An autonomous testing agent with multi-node graph architecture: test planning, execution, bug analysis, self-healing locators, and result reporting wi...</p><div class="ptags"><span class="ptag">sentence-transformers</span><span class="ptag">torch</span><span class="ptag">numpy</span><span class="ptag">pytest</span></div></div><div class="pcard fade-in"><div class="pcard-head"><h3>Insurance Document Analyzer</h3><a href="https://github.com/sonimaharshi1999/insurance-document-analyzer" target="_blank" class="pcard-link">&#8599;</a></div><p>An NLP pipeline that processes insurance policy documents to extract coverage types, limits, deductibles, exclusions, dates, and endorsements. Validat...</p><div class="ptags"><span class="ptag">nltk</span><span class="ptag">scikit-learn</span><span class="ptag">numpy</span><span class="ptag">pytest</span></div></div><div class="pcard fade-in"><div class="pcard-head"><h3>Flaky Test Detector</h3><a href="https://github.com/sonimaharshi1999/flaky-test-detector" target="_blank" class="pcard-link">&#8599;</a></div><p>Analyzes test execution history from JUnit XML reports to identify flaky tests using statistical analysis and ML classification. Outputs HTML reports ...</p><div class="ptags"><span class="ptag">numpy</span><span class="ptag">scikit-learn</span><span class="ptag">pytest</span></div></div><div class="pcard fade-in"><div class="pcard-head"><h3>BDD Scenario Generator</h3><a href="https://github.com/sonimaharshi1999/bdd-scenario-generator" target="_blank" class="pcard-link">&#8599;</a></div><p>Takes plain English requirements or user stories and generates complete Gherkin/Cucumber BDD scenarios with Given/When/Then steps, edge cases, and .fe...</p><div class="ptags"><span class="ptag">nltk</span><span class="ptag">pytest</span></div></div><div class="pcard fade-in"><div class="pcard-head"><h3>AI Visual Regression Tester</h3><a href="https://github.com/sonimaharshi1999/ai-visual-regression-tester" target="_blank" class="pcard-link">&#8599;</a></div><p>Uses computer vision (SSIM, perceptual hashing) to detect and classify visual differences between baseline and current screenshots as layout shift, co...</p><div class="ptags"><span class="ptag">Pillow</span><span class="ptag">scikit-image</span><span class="ptag">numpy</span><span class="ptag">pytest</span></div></div><div class="pcard fade-in"><div class="pcard-head"><h3>AI Test Data Generator</h3><a href="https://github.com/sonimaharshi1999/ai-test-data-generator" target="_blank" class="pcard-link">&#8599;</a></div><p>Generates realistic, schema-aware test data for any domain. Supports insurance policies, user profiles, transactions, API payloads with boundary value...</p><div class="ptags"><span class="ptag">numpy</span><span class="ptag">scikit-learn</span><span class="ptag">pytest</span></div></div><div class="pcard fade-in"><div class="pcard-head"><h3>AI Bug Triager</h3><a href="https://github.com/sonimaharshi1999/ai-bug-triager" target="_blank" class="pcard-link">&#8599;</a></div><p>Automatically classifies bug reports by severity, category, affected component, and suggested assignee using NLP with TF-IDF and scikit-learn classifi...</p><div class="ptags"><span class="ptag">scikit-learn</span><span class="ptag">flask</span><span class="ptag">numpy</span><span class="ptag">pytest</span></div></div></div>
+</section>
+
+<section class="contact-sec" id="contact">
+  <div class="fade-in">
+    <div class="sec-label">Get In Touch</div>
+    <div class="sec-h2">Contact.</div>
+  </div>
+  <div class="contact-card fade-in">
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">Your Name</label><input class="form-input" placeholder="Your name"></div>
+      <div class="form-group"><label class="form-label">Your Email</label><input class="form-input" placeholder="email@example.com"></div>
+    </div>
+    <div class="form-group full"><label class="form-label">Message</label><textarea class="form-input" placeholder="Let's build something amazing together..."></textarea></div>
+    <a href="mailto:soni.maharshi1999@gmail.com" class="btn-submit">Send Message</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-ghost">MAHARSHI</div>
+  <div class="foot-links">
+    <a href="https://github.com/sonimaharshi1999" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/maharshi-soni-b56736170" target="_blank">LinkedIn</a>
+    <a href="mailto:soni.maharshi1999@gmail.com">Email</a>
+    <a href="engineering.html">Dark Theme</a>
+  </div>
+  <div class="foot-copy">Maharshi Soni<br><span style="font-size:10px;color:var(--txt3);margin-top:8px;display:block;line-height:1.6">With great code comes great responsibility. All projects are MIT licensed, original work, and copyright compliant.<br>No copyrighted characters or trademarked assets were used in this portfolio. Spider-themed visuals are original illustrations.</span></div>
+</footer>
+
+<script>
+// Scroll animations
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')});},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+// Hero spidey mask reveal
+const heroImg=document.getElementById('heroImg');
+const spideyOverlay=heroImg?.querySelector('.spidey-overlay');
+if(heroImg&&spideyOverlay){
+  heroImg.addEventListener('mousemove',e=>{
+    const r=heroImg.getBoundingClientRect();
+    const x=((e.clientX-r.left)/r.width*100);
+    const y=((e.clientY-r.top)/r.height*100);
+    spideyOverlay.style.maskImage=`radial-gradient(circle 100px at ${x}% ${y}%, transparent 0%, transparent 50%, black 100%)`;
+    spideyOverlay.style.webkitMaskImage=spideyOverlay.style.maskImage;
+  });
+  heroImg.addEventListener('mouseleave',()=>{
+    spideyOverlay.style.maskImage='radial-gradient(circle 0px at 50% 50%, transparent 0%, transparent 50%, black 100%)';
+    spideyOverlay.style.webkitMaskImage=spideyOverlay.style.maskImage;
+  });
+}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'})});});
+</script>
+</body></html>
